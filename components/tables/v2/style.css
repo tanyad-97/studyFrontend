@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
+:root {
+    --colorBorder: 1px solid #13c208;
+    --colorFontTable: #039;
+    --backgroundRowBody: rgba(194, 194, 242, 0.17);
+    --fontTable: 'Work Sans', sans-serif;
+}
+
+.table {
+    counter-reset: cellNumber;
+    border-collapse: collapse;
+    color: var(--colorFontTable);
+    font-size: 15px;
+    font-family: var(--fontTable);
+    text-align: right;
+}
+
+.table__caption {
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.table__row {
+    padding: 10px 15px;
+}
+
+.table__row_header {}
+
+.table__row_body {}
+
+
+.table__row_body:not(.table__row_body--name):nth-child(2n+1) {
+    background: var(--backgroundRowBody);
+}
+
+.table__row_footer {}
+
+.table__cell {
+    border: var(--colorBorder);
+    padding: 10px 20px;
+}
+
+.table__cell_body__number {
+    counter-increment: cellNumber;
+}
+
+.table__cell_body__number:first-child::before {
+    content: counter(cellNumber);
+    margin-right: 20px;
+
+}
+
+.table__cell_header {
+    font-weight: normal;
+    text-transform: uppercase;
+    border: var(--colorBorder);
+    padding: 20px;
+}
+
+.table__cell_footer {
+    text-align: left;
+}
+
+.table__cell_header--direction_left {
+    text-align: left;
+}
+
+.table__cell_body--direction_left {
+    text-align: left;
+}
+
+.table__cel_body--other {
+    padding: 20px;
+}
