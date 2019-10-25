@@ -1,0 +1,38 @@
+.container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container__body__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.container__body__item {
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+    padding: 2px;
+    position: relative;
+    width: 100%;
+}
+
+.container__body__item--width {
+    -webkit-box-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+}
+
+img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
+
+}
