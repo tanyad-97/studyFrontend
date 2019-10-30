@@ -7,37 +7,37 @@
 </head>
 
 <body>
-    <form>
+    <form action="action.php" method="post">
         <fieldset>
             <legend>Общее</legend>
-            <p><label for="name">Имя<em>*</em></label>
-                <input type="text" id="name" placeholder="Имя" required></p>
-            <p><label for="surname">Фамилия<em>*</em></label>
-                <input type="text" id="surname" placeholder="Фамилия" required></p>
+            <p><label for="name">Имя</label>
+                <input name="name" type="text" id="name" placeholder="Имя" required></p>
+            <p><label for="surname">Фамилия</label>
+                <input name="surname" type="text" id="surname" placeholder="Фамилия" required></p>
             <p><label for="patronymic">Отчество</label>
-                <input type="text" id="patronymic" placeholder="Отчество"></p>
-            <p><label for="age">Дата Рождения<em>*</em></label>
-                <input type="date" id="age" required></p>
+                <input name="patronymic" type="text" id="patronymic" placeholder="Отчество"></p>
+            <p><label for="age">Дата Рождения</label>
+                <input name="age" type="date" id="age" required></p>
         </fieldset>
 
         <fieldset>
             <legend>Контакты</legend>
             <p><label for="adress">Адрес</label>
-                <input placeholder="Адрес проживания" type="text" id="adress"><input type="button" value="+"></p>
-            <p><label for="phone">Телефон<em>*</em></label>
-                <input pattern="+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" type="text" id="phone" placeholder="Телефон" required><input type="button" value="+"></p>
+                <input name="adress" placeholder="Адрес проживания" type="text" id="adress"><input type="button" value="+"></p>
+            <p><label for="phone">Телефон</label>
+                <input pattern="+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" type="text" id="phone" name="phone" placeholder="Телефон" required><input type="button" value="+"></p>
             <p><label for="email">E-mail</label>
-                <input type="email" id="email" placeholder="Электронная почта"><input type="button" value="+"></p>
-            <p><label for="skype">Skype<em>*</em></label>
-                <input type="text" id="skype" placeholder="Логин" required><input type="button" value="+"></p>
+                <input type="email" name="email" id="email" placeholder="Электронная почта"><input type="button" value="+"></p>
+            <p><label for="skype">Skype</label>
+                <input type="text" id="skype" name="skype" placeholder="Логин" required><input type="button" value="+"></p>
         </fieldset>
 
         <fieldset>
             <legend>Образование</legend>
             <p><label for="stady">Учебное заведение</label>
-                <input type="text" id="stady" placeholder="Учебное заведение"></p>
+                <input type="text" id="stady" name="stady" placeholder="Учебное заведение"></p>
             <p><label for="specialty">Специальность</label>
-                <input type="text" id="specialty" placeholder="Специальность"></p>
+                <input type="text" id="specialty" name="specialty" placeholder="Специальность"></p>
             <p><label for="power">Степень</label>
                 <select name="power" id="power">
                     <option>Степень1</option>
@@ -47,48 +47,50 @@
                     <option>Степень5</option>
                 </select></p>
             <p><label>Годы обучения</label>
-                <input for="year" type="number" min="1000" max="3000" step="1" id="yaer" value="2014"> - <input for="year" type="number" min="1000" max="3000" step="1" value="2018" id="yaer"></p>
+                <input name="startyear" type="number" min="1900" max="2100" step="1" id="startyear"> - <input name="endyear" type="number" min="1000" max="3000" step="1" id="endyear"></p>
         </fieldset>
 
         <fieldset>
             <legend>Семья</legend>
             <p><label for="status">Семейное положение</label>
                 <select name="status" id="status">
-                    <option value="yes">Женат/Замужем</option>
-                    <option value="no">Не женат/Не замужем</option>
+                    <option>Женат/Замужем</option>
+                    <option>Не женат/Не замужем</option>
+                    <option>В гражданском браке</option>
                 </select></p>
             <p><label for="kids">Детей до 14</label>
-                <input type="number" min="0" max="100" step="1" id="kids"></p>
+                <input name="kids" type="number" min="0" max="100" step="1" id="kids"></p>
         </fieldset>
 
         <fieldset>
             <legend>Работа</legend>
-            <p><label for="ip">IP-Адрес<em>*</em></label>
-                <input type="text" id="ip" placeholder="IP-адрес компьютера" required></p>
-            <p><label for="login">Логин<em>*</em></label>
-                <input type="text" id="login" placeholder="Логин" required></p>
-            <p><label for="password">Пароль<em>*</em></label>
-                <input type="password" id="password" placeholder="Пароль" required></p>
-            <p><label for="employment date">Дата приема<em>*</em></label>
-                <input type="date" id="employment date" required></p>
-            <p><label for="specialty">Основная специальность</label>
-                <select name="speciality" id="speciality">
+            <p><label for="ip">IP-Адрес</label>
+                <input type="text" name="ip" id="ip" placeholder="IP-адрес компьютера" required pattern="^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"></p>
+            <p><label for="login">Логин</label>
+                <input type="text" id="login" name="login" placeholder="Логин" required></p>
+            <p><label for="password">Пароль</label>
+                <input name="password" type="password" id="password" placeholder="Пароль" required></p>
+            <p><label for="date">Дата приема</label>
+                <input type="date" id="date" name="date" required></p>
+            <p><label for="speciality">Основная специальность</label>
+                <input list="speciality">
+                <datalist name="speciality" id="speciality">
                     <option>Специальность1</option>
                     <option>Специальность2</option>
                     <option>Специальность3</option>
                     <option>Специальность4</option>
                     <option>Специальность5</option>
-                </select></p>
+                </datalist></p>
         </fieldset>
 
         <fieldset>
             <legend>Дополнительно</legend>
             <p><label for="site">Личный веб-сайт</label>
-                <input type="url" id="sait" placeholder="Сайт"></p>
+                <input type="url" id="site" name="site" placeholder="Сайт"></p>
             <p><label for="photo">Фотография</label>
-                <input type="button" id="photo" value="Выберите файл"> Файл не выбран </p>
+                <input type="button" id="photo" value="Выберите файл"></p>
             <p><label for="myself">О себе</label>
-                <textarea></textarea>
+                <textarea id="myself" name="myself"></textarea>
             </p>
             <p><label for="interests">Интересы</label>
                 <input list="interests">
@@ -102,13 +104,9 @@
         </fieldset>
 
         <fieldset>
-            <form method="post">
-                <p><label>
-                        <input type="checkbox">Согласен на обработку данных </label>
-                    <input type="submit" value="Сохранить"></p>
-            </form>
+            <p><label>
+                    <input type="checkbox">Согласен на обработку данных </label>
+                <input type="submit" value="Сохранить"></p>
         </fieldset>
     </form>
-</body>
-
-</html>
+</body></html>
