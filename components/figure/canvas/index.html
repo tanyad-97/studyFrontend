@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Canvas</title>
+    <meta charset='utf-8' />
+</head>
+
+<body>
+    <canvas height='600' width='800' id='example'>Обновите браузер</canvas>
+    <script>
+        var example = document.getElementById("example"),
+            ctx = example.getContext('2d');
+
+        ctx.beginPath();
+        ctx.fillStyle = "#8de0ff";
+        ctx.rect(0, 0, 800, 600);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = "#916953";
+        ctx.arc(400, 200, 150, 0, 2 * Math.PI, true);
+        ctx.fill();
+
+        ctx.beginPath()
+        ctx.fillStyle = "#916953";
+        ctx.arc(300, 70, 50, 0, 2 * Math.PI, true);
+        ctx.fill();
+
+        ctx.beginPath()
+        ctx.fillStyle = "#FCB5B5";
+        ctx.arc(300, 70, 40, 0, 2 * Math.PI, true);
+        ctx.fill();
+
+        ctx.beginPath()
+        ctx.fillStyle = "#916953";
+        ctx.arc(500, 70, 50, 0, 2 * Math.PI, true);
+        ctx.fill();
+
+        ctx.beginPath()
+        ctx.fillStyle = "#FCB5B5";
+        ctx.arc(500, 70, 40, 0, 2 * Math.PI, true);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = "#916953";
+        ctx.arc(400, 200, 150, 0, 2 * Math.PI, true);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = "#FCB5B5";
+        ctx.ellipse(400, 250, 50, 55, Math.PI / 2, 0, 2 * Math.PI);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = "black";
+        ctx.arc(350, 190, 10, 0, 2 * Math.PI, true);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(450, 190, 10, 0, 2 * Math.PI, true);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.ellipse(400, 225, 10, 15, Math.PI / 2, 0, 2 * Math.PI);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(400, 230);
+        ctx.lineTo(400, 250);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.fillStyle = "#8de0ff";
+        ctx.ellipse(400, 265, 20, 25, Math.PI / 2, 0, 2 * Math.PI);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = "#ff8d8d";
+        ctx.ellipse(400, 265, 10, 15, Math.PI / 2, 0, 2 * Math.PI);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.strokeStyle = "#ff8d8d";
+        ctx.lineWidth = 2;
+        ctx.ellipse(400, 275, 10, 15, Math.PI / 2, 0, 2 * Math.PI);
+        ctx.stroke();
+
+    </script>
+</body>
+
+</html>
