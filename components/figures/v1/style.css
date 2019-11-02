@@ -1,0 +1,8 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+svg{
+   background: radial-gradient(circle at 25% 100%, yellow, #ff4000);
+}
