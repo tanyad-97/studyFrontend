@@ -1,0 +1,26 @@
+.container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container__body__row {
+    padding-top: 40px;
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.container__body__item {}
+
+.container__body__item--width {}
+
+img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
+
+}

@@ -1,0 +1,26 @@
+.table {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.table__row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.table__cell {
+    margin: 0 auto;
+    padding: 3px;
+    position: relative;
+}
+
+.table__cell__img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
+}
+
+.table__cell--width {}
