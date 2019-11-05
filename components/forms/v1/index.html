@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="page.html" method="post">
+        <fieldset>
+            <legend>Общее</legend>
+            <p><label for="name">Имя</label>
+                <input name="name" type="text" id="name" placeholder="Имя" required></p>
+            <p><label for="surname">Фамилия</label>
+                <input name="surname" type="text" id="surname" placeholder="Фамилия" required></p>
+            <p><label for="patronymic">Отчество</label>
+                <input name="patronymic" type="text" id="patronymic" placeholder="Отчество"></p>
+            <p><label for="age">Дата Рождения</label>
+                <input name="age" type="date" id="age" required></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Контакты</legend>
+            <p><label for="adress">Адрес</label>
+                <input name="adress" placeholder="Адрес проживания" type="text" id="adress"><input type="button" value="+"></p>
+            <p><label for="phone">Телефон</label>
+                <input pattern="+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" type="tel" id="phone" name="phone" placeholder="Телефон" required><input type="button" value="+"></p>
+            <p><label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Электронная почта"><input type="button" value="+"></p>
+            <p><label for="skype">Skype</label>
+                <input type="text" id="skype" name="skype" placeholder="Логин" required><input type="button" value="+"></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Образование</legend>
+            <p><label for="stady">Учебное заведение</label>
+                <input type="text" id="stady" name="stady" placeholder="Учебное заведение"></p>
+            <p><label for="specialty">Специальность</label>
+                <input type="text" id="specialty" name="specialty" placeholder="Специальность"></p>
+            <p><label for="power">Степень</label>
+                <select name="power" id="power">
+                    <option value="power1">Степень1</option>
+                    <option value="power2">Степень2</option>
+                    <option value="power3">Степень3</option>
+                    <option value="power4">Степень4</option>
+                    <option value="power5">Степень5</option>
+                </select></p>
+            <p><label>Годы обучения</label>
+                <input name="startyear" type="date" min="1900" max="2100" id="startyear"> - <input name="endyear" type="date" min="1900" max="2100" id="endyear"></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Семья</legend>
+            <p><label for="status">Семейное положение</label>
+                <select name="status" id="status">
+                    <option value="not-married">Женат/Замужем</option>
+                    <option value="in-married">Не женат/Не замужем</option>
+                    <option value="civil-marriage">В гражданском браке</option>
+                </select></p>
+            <p><label for="kids">Детей до 14</label>
+                <input name="kids" type="number" min="0" max="100" step="1" id="kids"></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Работа</legend>
+            <p><label for="ip">IP-Адрес</label>
+                <input type="text" name="ip" id="ip" placeholder="IP-адрес компьютера" required pattern="^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"></p>
+            <p><label for="login">Логин</label>
+                <input type="text" id="login" name="login" placeholder="Логин" required></p>
+            <p><label for="password">Пароль</label>
+                <input name="password" type="password" id="password" placeholder="Пароль" required></p>
+            <p><label for="date">Дата приема</label>
+                <input type="date" id="date" name="date" required></p>
+            <p><label for="speciality">Основная специальность</label>
+                <input list="speciality">
+                <datalist name="speciality" id="speciality">
+                    <option value="speciality1">Специальность1</option>
+                    <option value="speciality2">Специальность2</option>
+                    <option value="speciality3">Специальность3</option>
+                    <option value="speciality4">Специальность4</option>
+                    <option value="speciality5">Специальность5</option>
+                </datalist></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Дополнительно</legend>
+            <p><label for="site">Личный веб-сайт</label>
+                <input type="url" id="site" name="site" placeholder="Сайт"></p>
+            <p><label for="photo">Фотография</label>
+                <input type="file" id="photo" value="Выберите файл"></p>
+            <p><label for="myself">О себе</label>
+                <textarea id="myself" name="myself"></textarea>
+            </p>
+            <p><label for="interests">Интересы</label>
+                <input list="interests">
+                <datalist name="interests" id="interests">
+                    <option value="interests1">Интерес1</option>
+                    <option value="interests2">Интерес2</option>
+                    <option value="interests3">Интерес3</option>
+                    <option value="interests4">Интерес4</option>
+                    <option value="interests5">Интерес5</option>
+                </datalist></p>
+        </fieldset>
+
+        <fieldset>
+            <p><label>
+                    <input type="checkbox">Согласен на обработку данных </label>
+                <input type="submit" value="Сохранить"></p>
+        </fieldset>
+    </form>
+</body></html>
