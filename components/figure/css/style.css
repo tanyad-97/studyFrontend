@@ -19,7 +19,7 @@ body {
     background: none;
 }
 
-.head {
+.box__head {
     position: absolute;
     top: 16.5%;
     left: 25%;
@@ -29,7 +29,7 @@ body {
     border-radius: 50%;
 }
 
-.head-copy {
+.box__head-copy {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -38,7 +38,7 @@ body {
     z-index: 2;
 }
 
-.ear-left {
+.head__ear {
     position: absolute;
     width: 30%;
     height: 30%;
@@ -48,18 +48,11 @@ body {
     z-index: 1;
 }
 
-.ear-right {
-    position: absolute;
-    width: 30%;
-    height: 30%;
+.head__ear--right {
     right: 0;
-    top: -5%;
-    background: var(--brown);
-    border-radius: 50%;
-    z-index: 1;
 }
 
-.inner-ear {
+.head__inner-ear {
     position: absolute;
     border-radius: 50%;
     width: 80%;
@@ -69,29 +62,26 @@ body {
     background: var(--pink);
 }
 
-.eye-left {
+
+.head__eye {
     position: absolute;
     background: black;
     width: 5%;
     height: 5%;
     top: 50%;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.head__eye--left {
     left: 33%;
-    border-radius: 50%;
-    z-index: 3;
 }
 
-.eye-right {
-    position: absolute;
-    background: black;
-    width: 5%;
-    height: 5%;
-    top: 50%;
+.head__eye--right {
     right: 33%;
-    border-radius: 50%;
-    z-index: 3;
 }
 
-.snout {
+.head__snout {
     position: absolute;
     background: var(--pink);
     width: 26%;
@@ -102,7 +92,7 @@ body {
     z-index: 4;
 }
 
-.nose {
+.snout__nose {
     position: absolute;
     top: 10%;
     left: 35%;
@@ -113,7 +103,7 @@ body {
 
 }
 
-.bridge {
+.snout__bridge {
     position: absolute;
     top: 15%;
     left: 45%;
@@ -123,7 +113,7 @@ body {
 }
 
 
-.paci {
+.snout__paci {
     position: absolute;
     top: 40%;
     left: 23%;
@@ -134,7 +124,7 @@ body {
 
 }
 
-.mid {
+.paci__mid {
     position: absolute;
     top: 15%;
     left: 20%;
@@ -144,7 +134,7 @@ body {
     border-radius: 50%;
 }
 
-.ring {
+.paci__ring {
     position: absolute;
     top: 25%;
     left: 15%;
