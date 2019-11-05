@@ -1,0 +1,68 @@
+:root {
+    --color-orange: #FFB214;
+    --color-blue: #497DDD;
+    --color-black: #292929;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 5px 10px;
+    padding: 5px 10px;
+}
+
+/*Оформление всевозможных состояний ссылки*/
+
+a:link {
+    color: var(--color-black);
+}
+
+a:visited {
+    color: var(--color-blue);
+}
+
+a:hover {
+    color: var(--color-orange);
+    border-bottom: 1px solid;
+}
+
+a:active {
+    color: var(--color-blue);
+    border-bottom: 1px solid;
+}
+
+/* Оформление ссылки для бумажного носителя*/
+
+@media print {
+    a:after {
+        content: " ("attr(href) ") ";
+        font-size: 90%;
+    }
+}
+
+/*Выделение разными маркерами ссылки относящиеся к текущему домену и стороннему*/
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+a[href$=".com"]:before {
+    content: "♣";
+    padding-right: 10px;
+    color: var(--color-orange);
+}
+
+a[href$=".ru"]:before {
+    content: "♠";
+    padding-right: 10px;
+    color: var(--color-orange);
+}
+
+/*Выделение области на которую перешли по якорю*/
+p:target {
+    color: var(--color-black);
+    border-color: var(--color-orange);
+    -webkit-box-shadow: 0 0 4px var(--color-orange);
+    box-shadow: 0 0 4px var(--color-orange);
+}
